@@ -55,7 +55,9 @@ Example:
 - Primary segment: `{{TARGET_MARKET}}`
 - Secondary segment: optional custom segment
 - Daily new leads: 10
-- Lead-enrichment CLI: none by default
+- Lead-enrichment CLI: `findymail` via `@paulelliot/findymail-cli` (unofficial) or none by default
+- Install: `npm install -g @paulelliot/findymail-cli`
+- Repo: `https://github.com/paulelliotco/findymail-cli`
 - If configured, document the exact command name and lookup order here
 - Preferred order: website public email -> enrichment lookup -> verification -> tracker update
 - Verify working website + real email before adding

@@ -142,5 +142,7 @@ Keep these rules:
 
 Example optional setup:
 
-- local CLI: `<your-local-enrichment-cli>`
+- local CLI: `findymail` via `@paulelliot/findymail-cli` (unofficial)
+- install: `npm install -g @paulelliot/findymail-cli`
+- repo: `https://github.com/paulelliotco/findymail-cli`
 - workflow: website public email -> enrichment lookup -> verification -> continue the normal tracker/outreach flow
