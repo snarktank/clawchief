@@ -46,6 +46,7 @@ Example knobs to define:
 - optional secondary target segment
 - default daily batch size
 - verification requirements
+- optional local lead-enrichment CLI
 - default outreach tone
 - follow-up cadence overrides
 
@@ -54,4 +55,7 @@ Example:
 - Primary segment: `{{TARGET_MARKET}}`
 - Secondary segment: optional custom segment
 - Daily new leads: 10
+- Lead-enrichment CLI: none by default
+- If configured, document the exact command name and lookup order here
+- Preferred order: website public email -> enrichment lookup -> verification -> tracker update
 - Verify working website + real email before adding

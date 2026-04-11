@@ -18,7 +18,9 @@ Use this skill for outreach and prospect tracking work. Keep it separate from ge
 
 - the outreach sheet / tracker / CRM is the live source of truth; do not treat local prospect files as current state
 - do not silently broaden default prospecting beyond the configured target market / geography without explicit direction
-- verify a working website and a real public email before adding a new lead unless the user explicitly waives that requirement
+- verify a working website before adding a new lead unless the user explicitly waives that requirement
+- prefer a real public email when one exists
+- if no trustworthy public email is visible and a local lead-enrichment CLI is configured in `workspace/TOOLS.md`, use it only to produce a candidate work email, then verify that candidate before using it
 - ignore placeholder or junk addresses from site code
 - sweep sent mail so unanswered outreach does not disappear
 - if the work touches lead status, pipeline state, or the outreach tracker, this skill owns it even when scheduling is part of the job
@@ -45,6 +47,18 @@ If no more specific override exists, default to:
 - prospecting inside `{{TARGET_MARKET}}` in `{{TARGET_GEOGRAPHY}}`
 - adding only verified leads
 - using the default follow-up cadence in this skill
+
+## Optional lead enrichment
+
+If `workspace/TOOLS.md` defines a local lead-enrichment CLI, you may use it only as a helper for already-qualified leads during sourcing.
+
+Rules:
+- this is optional and not required for the base workflow
+- check the website first and prefer a real public email when one exists
+- only use enrichment for leads that already match the configured target market / geography
+- verify any candidate email before adding the lead or sending outreach
+- do not treat enrichment output as the source of truth
+- do not increase batch size or broaden targeting just because enrichment is available
 
 ## When to update the tracker
 
@@ -116,9 +130,10 @@ Rules:
 2. verify the lead matches the configured target market / geography
 3. verify a working website unless explicitly waived
 4. inspect the website for a real public email address before leaving email blank
-5. send the initial outreach email using `resources/partners.md`
-6. update the tracker immediately after each action
-7. sweep sent mail for unanswered outreach and follow up on cadence
+5. if no trustworthy public email is visible and a local lead-enrichment CLI is configured, use it to produce a candidate work email and verify that candidate before use
+6. send the initial outreach email using `resources/partners.md`
+7. update the tracker immediately after each action
+8. sweep sent mail for unanswered outreach and follow up on cadence
 
 ## Operating standard
 

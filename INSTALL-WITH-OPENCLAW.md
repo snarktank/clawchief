@@ -124,3 +124,23 @@ Notes:
 ## 7. Validate the install
 
 Run `INSTALL-CHECKLIST.md`.
+
+## Optional: local lead enrichment
+
+This starter kit does not require a lead-enrichment tool.
+
+If you already use one, document it in `workspace/TOOLS.md` and keep it as an optional helper during prospecting.
+
+Keep these rules:
+
+- do not block the base install on it
+- still check the website first
+- verify any candidate email before using it
+- treat the outreach tracker as the source of truth
+- only use it for leads that already match your configured target market / geography
+- do not broaden targeting or increase batch size just because enrichment is available
+
+Example optional setup:
+
+- local CLI: `<your-local-enrichment-cli>`
+- workflow: website public email -> enrichment lookup -> verification -> continue the normal tracker/outreach flow
