@@ -59,3 +59,4 @@ Example:
 - If configured, document the exact command name and lookup order here
 - Preferred order: website public email -> enrichment lookup -> verification -> tracker update
 - Verify working website + real email before adding
+- Optional local lead enrichment: if you use Findymail, document that workflow here (`findymail-cli` is unofficial).
